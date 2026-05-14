@@ -199,7 +199,53 @@
     flex-shrink: 0;
     letter-spacing: 0.5px;
   }
+  /* NUEVOS ESTILOS PARA PRECIOS EN DOS COLUMNAS */
+  .price-group {
+    display: flex;
+    gap: 12px;
+    flex-shrink: 0;
+    align-items: baseline;
+  }
+  .price-item {
+    text-align: right;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 13px;
+    color: #D4AF37;
+    min-width: 52px;
+    letter-spacing: 0.3px;
+  }
+  .price-label {
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    color: var(--text-dim);
+    display: block;
+    margin-bottom: 2px;
+  }
+  .price-value {
+    font-size: 14px;
+    font-weight: 800;
+    display: block;
+  }
 
+  /* Estilo para el contenedor de los encabezados de las columnas de precio */
+  .price-header-group {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-bottom: 8px;
+    padding: 0 2px;
+  }
+  .price-header-item {
+    text-align: right;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 11px;
+    color: var(--gold-light);
+    min-width: 52px;
+    letter-spacing: 1px;
+  }
   .item-sep { display: none; }
 
   .sub-items { padding-left: 22px; margin-top: 2px; }
@@ -350,60 +396,260 @@
 
       <!-- MICHELADAS -->
       <div class="category">
+                  <!-- ENCABEZADOS DE LAS COLUMNAS DE PRECIO -->
+        <div class="price-header-group">
+          <div class="price-header-item">1/2 Lt</div>
+          <div class="price-header-item">1 Lt</div>
+        </div>
         <div class="category-header">Micheladas</div>
-        <div class="item"><span class="item-star">★</span><span class="item-name">Chelada</span><div class="item-dots"></div><span class="item-price">$ 95</span></div>
+            <div class="item">
+          <span class="item-star">★</span>
+          <span class="item-name">Chelada</span>
+          <div class="item-dots"></div>
+          <div class="price-group">
+            <div class="price-item">
+              <span class="price-value">$55</span>
+            </div>
+            <div class="price-item">
+              <span class="price-value">$95</span>
+            </div>
+          </div>
+        </div>
         <div class="sub-items"><div class="sub-item"><span class="sub-item-dot"></span><span class="sub-item-name">Limón y sal</span></div></div>
-        <div class="item"><span class="item-star">★</span><span class="item-name">Cubana</span><div class="item-dots"></div><span class="item-price">$ 115</span></div>
+        <div class="item">
+          <span class="item-star">★</span>
+          <span class="item-name">Cubana</span>
+          <div class="item-dots"></div>
+          <div class="price-group">
+            <div class="price-item">
+              <span class="price-value">$65</span>
+            </div>
+            <div class="price-item">
+              <span class="price-value">$115</span>
+            </div>
+          </div>
+        </div>
         <div class="sub-items"><div class="sub-item"><span class="sub-item-dot"></span><span class="sub-item-name">Salsas</span></div></div>
-        <div class="item"><span class="item-star">★</span><span class="item-name">Clamato</span><div class="item-dots"></div><span class="item-price">$ 115</span></div>
-        <div class="sub-items"><div class="sub-item"><span class="sub-item-dot"></span><span class="sub-item-name">Salsas</span></div></div>
-        <div class="item"><span class="item-star">★</span><span class="item-name">Bandidos</span><div class="item-dots"></div><span class="item-price">$ 115</span></div>
+        <div class="item">
+          <span class="item-star">★</span>
+          <span class="item-name">Clamato</span>
+          <div class="item-dots"></div>
+          <div class="price-group">
+            <div class="price-item">
+              <span class="price-value">$65</span>
+            </div>
+            <div class="price-item">
+              <span class="price-value">$115</span>
+            </div>
+          </div>
+        </div>
+       
+        <div class="item">
+          <span class="item-star">★</span>
+          <span class="item-name">Bandidos</span>
+          <div class="item-dots"></div>
+          <div class="price-group">
+            <div class="price-item">
+              <span class="price-value">$65</span>
+            </div>
+            <div class="price-item">
+              <span class="price-value">$115</span>
+            </div>
+          </div>
+        </div>
         <div class="sub-items"><div class="sub-item"><span class="sub-item-dot"></span><span class="sub-item-name"> Sangrita</span></div></div>
         <div class="item"><span class="item-star">★</span><span class="item-name">Vaso Decorativo <span style="font-size:11px;color:var(--text-dim);font-style:italic;">(Especial)</span></span></div>
         <div class="sub-items">
+            <div class="sub-item"><span class="sub-item-dot"></span><span class="sub-item-name">Tina</span><div class="sub-item-dots"></div><span class="sub-item-price">$ 115</span></div>
           <div class="sub-item"><span class="sub-item-dot"></span><span class="sub-item-name">Licuachela</span><div class="sub-item-dots"></div><span class="sub-item-price">$ 120</span></div>
-          <div class="sub-item"><span class="sub-item-dot"></span><span class="sub-item-name">Balón del FIFA</span><div class="sub-item-dots"></div><span class="sub-item-price">$ 120</span></div>
+          <div class="sub-item"><span class="sub-item-dot"></span><span class="sub-item-name">Pato </span><div class="sub-item-dots"></div><span class="sub-item-price">$ 130</span></div>
+          <div class="sub-item"><span class="sub-item-dot"></span><span class="sub-item-name">Osito</span><div class="sub-item-dots"></div><span class="sub-item-price">$ 135</span></div>
+          <div class="sub-item"><span class="sub-item-dot"></span><span class="sub-item-name">Kittie</span><div class="sub-item-dots"></div><span class="sub-item-price">$ 135</span></div>
+           <div class="sub-item"><span class="sub-item-name"> FIFA</span><div class="sub-item-dots"></div></div>
+          <div class="sub-item"><span class="sub-item-dot"></span><span class="sub-item-name">Balón FIFA</span><div class="sub-item-dots"></div><span class="sub-item-price">$ 120</span></div>
+          <div class="sub-item"><span class="sub-item-dot"></span><span class="sub-item-name">Copa FIFA</span><div class="sub-item-dots"></div><span class="sub-item-price">$ 120</span></div>
+          <div class="sub-item"><span class="sub-item-dot"></span><span class="sub-item-name">Vaso FIFA</span><div class="sub-item-dots"></div><span class="sub-item-price">$ 130</span></div>
+          <div class="sub-item"><span class="sub-item-dot"></span><span class="sub-item-name">Copa FIFA Dorada</span><div class="sub-item-dots"></div><span class="sub-item-price">$ 145</span></div>
         </div>
       </div>
 
       <div class="divider"><div class="divider-line"></div><span class="divider-diamond">◆</span><div class="divider-line"></div></div>
 
       <!-- MOJITOS -->
+              <!-- ENCABEZADOS DE LAS COLUMNAS DE PRECIO -->
+        <div class="price-header-group">
+          <div class="price-header-item">1/2 Lt</div>
+          <div class="price-header-item">1 Lt</div>
+        </div>
       <div class="category">
         <div class="category-header">Mojitos</div>
-        <div class="item"><span class="item-star">★</span><span class="item-name">Clásico</span><div class="item-dots"></div><span class="item-price">$ 100</span></div>
+        <div class="item">
+          <span class="item-star">★</span>
+          <span class="item-name">Clásico</span>
+          <div class="item-dots"></div>
+          <div class="price-group">
+            <div class="price-item">
+              <span class="price-value">$60</span>
+            </div>
+            <div class="price-item">
+              <span class="price-value">$100</span>
+            </div>
+          </div>
+        </div>
         <div class="sub-items"><div class="sub-item"><span class="sub-item-dot"></span><span class="sub-item-name">Limón</span></div></div>
-        <div class="item"><span class="item-star">★</span><span class="item-name">Frutos Rojos</span><div class="item-dots"></div><span class="item-price">$ 115</span></div>
+        <div class="item">
+          <span class="item-star">★</span>
+          <span class="item-name">Frutos Rojos</span>
+          <div class="item-dots"></div>
+          <div class="price-group">
+            <div class="price-item">
+              <span class="price-value">$65</span>
+            </div>
+            <div class="price-item">
+              <span class="price-value">$115</span>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="divider"><div class="divider-line"></div><span class="divider-diamond">◆</span><div class="divider-line"></div></div>
 
       <!-- AZULITOS -->
+       <div class="price-header-group">
+          <div class="price-header-item">1/2 Lt</div>
+          <div class="price-header-item">1 Lt</div>
+        </div>
       <div class="category">
         <div class="category-header">Azulitos</div>
-        <div class="item"><span class="item-star">★</span><span class="item-name">Azulitos</span><div class="item-dots"></div><span class="item-price">$ 115</span></div>
-        <div class="item"><span class="item-star">★</span><span class="item-name">Azulitos Kids</span><div class="item-dots"></div><span class="item-price">$ 115</span></div>
+        <div class="item">
+          <span class="item-star">★</span>
+          <span class="item-name">Azulitos </span>
+          <div class="item-dots"></div>
+          <div class="price-group">
+            <div class="price-item">
+              <span class="price-value">$65</span>
+            </div>
+            <div class="price-item">
+              <span class="price-value">$115</span>
+            </div>
+          </div>
+        </div>
+         <div class="item">
+          <span class="item-star" style="color:#80c880;">◆</span>
+          <span class="item-name">Azulitos Kids</span>
+          <div class="item-dots"></div>
+          <div class="price-group">
+            <div class="price-item">
+              <span class="price-value">$55</span>
+            </div>
+            <div class="price-item">
+              <span class="price-value">$95</span>
+            </div>
+          </div>
+        </div>
+         <div class="sub-items"><div class="sub-item"><span class="sub-item-dot"></span><span class="sub-item-name">Sin Alcohol</span></div></div>
       </div>
 
       <div class="divider"><div class="divider-line"></div><span class="divider-diamond">◆</span><div class="divider-line"></div></div>
 
       <!-- KITTIES -->
+        <div class="price-header-group">
+          <div class="price-header-item">1/2 Lt</div>
+          <div class="price-header-item">1 Lt</div>
+        </div>
       <div class="category">
         <div class="category-header">Kitties</div>
-        <div class="item"><span class="item-star">★</span><span class="item-name">Kitties</span><div class="item-dots"></div><span class="item-price">$ —</span></div>
-        <div class="item"><span class="item-star">★</span><span class="item-name">Kitties Kids</span><div class="item-dots"></div><span class="item-price">$ —</span></div>
+        <div class="item">
+          <span class="item-star">★</span>
+          <span class="item-name">Kitties </span>
+          <div class="item-dots"></div>
+          <div class="price-group">
+            <div class="price-item">
+              <span class="price-value">$65</span>
+            </div>
+            <div class="price-item">
+              <span class="price-value">$115</span>
+            </div>
+          </div>
+        </div>
+         <div class="item">
+          <span class="item-star" style="color:#80c880;">◆</span>
+          <span class="item-name">Kitties Kids</span>
+          <div class="item-dots"></div>
+          <div class="price-group">
+            <div class="price-item">
+              <span class="price-value">$55</span>
+            </div>
+            <div class="price-item">
+              <span class="price-value">$95</span>
+            </div>
+          </div>
+        </div>
+         <div class="sub-items"><div class="sub-item"><span class="sub-item-dot"></span><span class="sub-item-name">Sin Alcohol</span></div></div>
       </div>
 
       <div class="divider"><div class="divider-line"></div><span class="divider-diamond">◆</span><div class="divider-line"></div></div>
 
       <!-- SIN ALCOHOL -->
+      <div class="price-header-group">
+          <div class="price-header-item">1/2 Lt</div>
+          <div class="price-header-item">1 Lt</div>
+        </div>
       <div class="category">
         <div class="category-header">Sin Alcohol</div>
         <div style="margin-bottom:8px;"><span class="sa-badge">SIN ALCOHOL</span></div>
-        <div class="item"><span class="item-star" style="color:#80c880;">◆</span><span class="item-name">Sangría Preparada</span><div class="item-dots"></div><span class="item-price">$ —</span></div>
-        <div class="item"><span class="item-star" style="color:#80c880;">◆</span><span class="item-name">Limonada</span><div class="item-dots"></div><span class="item-price">$ —</span></div>
-        <div class="item"><span class="item-star" style="color:#80c880;">◆</span><span class="item-name">Limonada de Frutos Rojos</span><div class="item-dots"></div><span class="item-price">$ —</span></div>
-        <div class="item"><span class="item-star" style="color:#80c880;">◆</span><span class="item-name">Naranjada</span><div class="item-dots"></div><span class="item-price">$ —</span></div>
+        <div class="item">
+          <span class="item-star" style="color:#80c880;">◆</span>
+          <span class="item-name">Sangría Preparada</span>
+          <div class="item-dots"></div>
+          <div class="price-group">
+            <div class="price-item">
+              <span class="price-value">Proximamente</span>
+            </div>
+            <div class="price-item">
+              <span class="price-value"></span>
+            </div>
+          </div>
+        </div>
+       <div class="item">
+          <span class="item-star" style="color:#80c880;">◆</span>
+          <span class="item-name"> Limonada</span>
+          <div class="item-dots"></div>
+          <div class="price-group">
+            <div class="price-item">
+              <span class="price-value">$55</span>
+            </div>
+            <div class="price-item">
+              <span class="price-value">$95</span>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <span class="item-star" style="color:#80c880;">◆</span>
+          <span class="item-name"> Limonada Frutos Rojos</span>
+          <div class="item-dots"></div>
+          <div class="price-group">
+            <div class="price-item">
+              <span class="price-value">$60</span>
+            </div>
+            <div class="price-item">
+              <span class="price-value">$100</span>
+            </div>
+          </div>
+        </div>
+       <div class="item">
+          <span class="item-star" style="color:#80c880;">◆</span>
+          <span class="item-name"> Naranjada</span>
+          <div class="item-dots"></div>
+          <div class="price-group">
+            <div class="price-item">
+              <span class="price-value">$55</span>
+            </div>
+            <div class="price-item">
+              <span class="price-value">$95</span>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- FOOTER -->
