@@ -199,6 +199,10 @@
     flex-shrink: 0;
     letter-spacing: 0.5px;
   }
+  /* Elimina la línea inferior en ítems que tienen subitems */
+  .item--has-subitems {
+  border-bottom: none;
+ }
   /* NUEVOS ESTILOS PARA PRECIOS EN DOS COLUMNAS */
   .price-group {
     display: flex;
@@ -248,7 +252,7 @@
   }
   .item-sep { display: none; }
 
-  .sub-items { padding-left: 22px; margin-top: 2px; }
+  .sub-items { padding-left: 22px; margin-top: -6px; }
 
   .sub-item {
     display: flex;
@@ -256,6 +260,16 @@
     gap: 6px;
     padding: 3px 0;
   }
+  /* Agrega línea separadora después del último subitem de cada grupo */
+.sub-items {
+  border-bottom: 1px solid rgba(80, 40, 0, 0.25);
+  margin-bottom: 6px;
+}
+
+/* Elimina el borde inferior del último subitem (opcional, para evitar doble línea) */
+.sub-item:last-child {
+  border-bottom: none;
+}
 
   .sub-item-dot {
     width: 4px; height: 4px;
@@ -284,7 +298,7 @@
   .sub-item-price {
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 800;
-    font-size: 13px;
+    font-size: 14px;
     color: #D4AF37;
     min-width: 52px;
     text-align: right;
@@ -402,7 +416,7 @@
           <div class="price-header-item">1 Lt</div>
         </div>
         <div class="category-header">Micheladas</div>
-            <div class="item">
+            <div class="item item--has-subitems">
           <span class="item-star">★</span>
           <span class="item-name">Chelada</span>
           <div class="item-dots"></div>
@@ -415,8 +429,8 @@
             </div>
           </div>
         </div>
-        <div class="sub-items"><div class="sub-item"><span class="sub-item-dot"></span><span class="sub-item-name">Limón y sal</span></div></div>
-        <div class="item">
+        <div class="sub-items"><div class="sub-item"><span class="sub-item-name">Limón y sal</span></div></div>
+        <div class="item item--has-subitems">
           <span class="item-star">★</span>
           <span class="item-name">Cubana</span>
           <div class="item-dots"></div>
@@ -429,7 +443,7 @@
             </div>
           </div>
         </div>
-        <div class="sub-items"><div class="sub-item"><span class="sub-item-dot"></span><span class="sub-item-name">Salsas</span></div></div>
+        <div class="sub-items"><div class="sub-item">><span class="sub-item-name">Salsas</span></div></div>
         <div class="item">
           <span class="item-star">★</span>
           <span class="item-name">Clamato</span>
@@ -444,7 +458,7 @@
           </div>
         </div>
        
-        <div class="item">
+        <div class="item item--has-subitems">
           <span class="item-star">★</span>
           <span class="item-name">Bandidos</span>
           <div class="item-dots"></div>
@@ -457,8 +471,8 @@
             </div>
           </div>
         </div>
-        <div class="sub-items"><div class="sub-item"><span class="sub-item-dot"></span><span class="sub-item-name"> Sangrita</span></div></div>
-        <div class="item"><span class="item-star">★</span><span class="item-name">Vaso Decorativo <span style="font-size:11px;color:var(--text-dim);font-style:italic;">(Especial)</span></span></div>
+        <div class="sub-items"><div class="sub-item"><span class="sub-item-name"> Sangrita</span></div></div>
+        <div class="item item--has-subitems"><span class="item-star">★</span><span class="item-name">Vaso Decorativo <span style="font-size:11px;color:var(--text-dim);font-style:italic;">(Especial)</span></span></div>
         <div class="sub-items">
             <div class="sub-item"><span class="sub-item-dot"></span><span class="sub-item-name">Tina</span><div class="sub-item-dots"></div><span class="sub-item-price">$ 115</span></div>
           <div class="sub-item"><span class="sub-item-dot"></span><span class="sub-item-name">Licuachela</span><div class="sub-item-dots"></div><span class="sub-item-price">$ 120</span></div>
@@ -483,7 +497,7 @@
         </div>
       <div class="category">
         <div class="category-header">Mojitos</div>
-        <div class="item">
+        <div class="item item--has-subitems">
           <span class="item-star">★</span>
           <span class="item-name">Clásico</span>
           <div class="item-dots"></div>
@@ -496,7 +510,7 @@
             </div>
           </div>
         </div>
-        <div class="sub-items"><div class="sub-item"><span class="sub-item-dot"></span><span class="sub-item-name">Limón</span></div></div>
+        <div class="sub-items"><div class="sub-item"><span class="sub-item-name">Limón</span></div></div>
         <div class="item">
           <span class="item-star">★</span>
           <span class="item-name">Frutos Rojos</span>
@@ -534,7 +548,7 @@
             </div>
           </div>
         </div>
-         <div class="item">
+         <div class="item item--has-subitems">
           <span class="item-star" style="color:#80c880;">◆</span>
           <span class="item-name">Azulitos Kids</span>
           <div class="item-dots"></div>
@@ -547,7 +561,7 @@
             </div>
           </div>
         </div>
-         <div class="sub-items"><div class="sub-item"><span class="sub-item-dot"></span><span class="sub-item-name">Sin Alcohol</span></div></div>
+         <div class="sub-items"><div class="sub-item"><span class="sub-item-name">Sin Alcohol</span></div></div>
       </div>
 
       <div class="divider"><div class="divider-line"></div><span class="divider-diamond">◆</span><div class="divider-line"></div></div>
@@ -572,7 +586,7 @@
             </div>
           </div>
         </div>
-         <div class="item">
+         <div class="item item--has-subitems">
           <span class="item-star" style="color:#80c880;">◆</span>
           <span class="item-name">Kitties Kids</span>
           <div class="item-dots"></div>
@@ -585,7 +599,7 @@
             </div>
           </div>
         </div>
-         <div class="sub-items"><div class="sub-item"><span class="sub-item-dot"></span><span class="sub-item-name">Sin Alcohol</span></div></div>
+         <div class="sub-items"><div class="sub-item"><span class="sub-item-name">Sin Alcohol</span></div></div>
       </div>
 
       <div class="divider"><div class="divider-line"></div><span class="divider-diamond">◆</span><div class="divider-line"></div></div>
